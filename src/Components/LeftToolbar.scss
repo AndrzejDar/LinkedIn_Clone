@@ -1,0 +1,16 @@
+.leftToolbar_container{
+    width: 220px;
+
+    @media screen and (max-width: 1200px) {
+        width: 140px;
+    }
+
+    @media screen and (max-width: 992px) {
+        width: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 600px;
+        width: 100%;
+    }
+}

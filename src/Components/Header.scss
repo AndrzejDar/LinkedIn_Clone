@@ -1,0 +1,139 @@
+.header_container {
+  max-width: 1200px;
+  min-width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header_logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    max-width: 400px;
+
+    @media screen and (max-width: 998px) {
+      max-width: 200px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 57px;
+      gap: 0;
+    }
+
+    img {
+      margin-left: 5px;
+    }
+    .header_search {
+      width: 100%;
+      height: 36px;
+      border-radius: 5px;
+      background-color: var(--lightGray-color);
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+
+      input {
+        height: 32px;
+        max-width: 300px;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        background: none;
+      }
+    }
+  }
+
+  .header_menu {
+    height: 100%;
+    width: 100%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+
+      li {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        color: var(--gray-color);
+
+        &:hover {
+          color: var(--black-color);
+        }
+
+        @media screen and (max-width: 998px) {
+          max-width: 100px;
+          min-width: 30px;
+          width: 100%;
+        }
+
+        .header_menu-link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          position: absolute;
+
+
+          img {
+            border-radius: 50%;
+            width: 25px;
+            height: auto;
+          }
+
+          svg {
+            height: 22px;
+            width: auto;
+
+            @media screen and (max-width: 998px) {
+              height: 30px;
+            }
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            vertical-align: middle;
+  
+            @media screen and (max-width: 998px) {
+              display: none;
+            }
+  
+            svg {
+              font-size: 0.1rem;
+              size: 0.1rem;
+              height: 15px;
+            }
+          }
+        }
+
+        &.header_menu-break {
+          width: 1px !important;
+          min-width: 1px;
+          height: 100%;
+          background-color: var(--lightGray-color2);
+        }
+
+      }
+    }
+  }
+}

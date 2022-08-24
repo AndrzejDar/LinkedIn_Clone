@@ -1,0 +1,59 @@
+.form-input__record {
+
+  .form-input__field{
+    position: relative;
+    width:400px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 1s ease-in-out;
+
+    input{
+      width: 380px;
+      border: none;
+      outline: none;
+
+
+      &:invalid[wasfocused="true"] {
+        border-color: red;
+
+        ~ .errorMsg {
+          display: block;
+        }   
+
+        .form-input__field ~ .errorMsg {
+          display: block;
+        }   
+      }
+    
+      &:invalid {
+        color: rgb(187, 0, 0);
+      }
+
+      &:hover {
+        background-color: var(--light-gray-color);
+        transition: all 0.1s ease-in-out;
+      }
+      &:focus {
+        background-color: var(--light-gray-color);
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+
+
+  .errorMsg {
+    position: absolute;
+    top: 43px;
+    color: red;
+    font-size: small;
+    font-weight: 300;
+    text-align: left;
+    display: none;
+  }
+
+}

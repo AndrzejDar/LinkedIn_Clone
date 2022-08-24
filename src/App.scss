@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+
+:root {
+  --font-base: 'Roboto', "Bebas Neue", "DM Sans", "sans-serif";
+  --font-base-color: #252525>;
+  --primary-color: #ffdca8;
+  --secondary-color: #3e7bf5;
+  --white-color: #ffffff;
+  --black-color: #212121;
+  --lightGray-color: #f3f2ef;
+  --lightGray-color2: #e0dfdc;
+  --gray-color: #666666;
+  --brown-color: #46364a;
+  --light-color: #eafffb;
+  --accent-color: #0a66c2;
+  --accent1-color: #72e14a;
+  --accent2-color: #e0b74a;
+  --accent3-color: #e447bd;
+}
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--font-base);
+  font-weight: 300;
+  font-size: 14px;
+  
+}
+
+.app{
+  background-color: var(--lightGray-color);
+}
+
+.app__header{
+  width: 100%;
+  background-color: var(--white-color);
+  height: 50px;
+  border-bottom: 1px solid var(--lightGray-color2);
+  position: sticky;
+  top: 0;
+  z-index: 998;
+}
+
+.app__content{
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 20px;  
+
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.frame{
+  border: 1px solid var(--lightGray-color2);
+  border-radius: 10px;
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+.disabled{
+  color: var(--lightGray-color2);
+  cursor: no-drop !important; 
+}
+
+.soft-disabled{
+  cursor: no-drop !important; 
+  
+  &:hover{
+    color: var(--lightGray-color2);
+  }
+}
